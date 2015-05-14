@@ -1,0 +1,37 @@
+<ion-side-menus>
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced" animation="nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left" ng-if="!$exposeAside.active && sideMenuBase">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon-round">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menu-content"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu should-expose-when="(min-width:1024px)">
+    <ion-header-bar class="bar-light">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+    
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/base/search">
+          Search
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/base/browse">
+          Browse
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/base/playlists">
+          Playlists
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
